@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="2fc7f5f9-7259-4659-bec8-75c95b31684e" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="bd68ea71-2e57-47aa-89d1-975693ab0645" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -19,11 +19,11 @@
     <ServiceContractMappings />
   </ClientOptions>
   <MetadataSources>
-    <MetadataSource Address="http://localhost:8080/Ws_practica1/WebService_Practica1?wsdl" Protocol="http" SourceId="1" />
+    <MetadataSource Address="http://localhost:8080/Proyecto_2017/Ws_2017?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="WebService_Practica1.wsdl" MetadataType="Wsdl" ID="90bfa235-f692-4f85-9737-2f70d175164f" SourceId="1" SourceUrl="http://localhost:8080/Ws_practica1/WebService_Practica1?wsdl" />
-    <MetadataFile FileName="WebService_Practica1.xsd" MetadataType="Schema" ID="9a78d804-ca3f-4ebb-bd27-799e8afe030f" SourceId="1" SourceUrl="http://localhost:8080/Ws_practica1/WebService_Practica1?xsd=1" />
+    <MetadataFile FileName="Ws_2017.xsd" MetadataType="Schema" ID="e219605b-157e-4807-8e04-b1d6280d3563" SourceId="1" SourceUrl="http://localhost:8080/Proyecto_2017/Ws_2017?xsd=1" />
+    <MetadataFile FileName="Ws_2017.wsdl" MetadataType="Wsdl" ID="91593be7-afbc-49ee-ab0c-4b4c14235941" SourceId="1" SourceUrl="http://localhost:8080/Proyecto_2017/Ws_2017?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

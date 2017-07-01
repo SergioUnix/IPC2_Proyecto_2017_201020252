@@ -9,7 +9,8 @@ p { margin:0; padding:0;}
 
 
 /*==================forms====================*/
-input, select { vertical-align:middle; font-weight:normal;}
+input, select { vertical-align:middle; font-weight:normal;
+    }
 img {border:0; vertical-align:top; text-align:left;}
 
 /*=====GLOBAL======*/
@@ -45,7 +46,7 @@ ul { list-style:none;}
 .site-nav { position:absolute; left:15px; 
 top:12px; 
 overflow:hidden;
-    height: 28px;
+    height: 45px;
 }
 .site-nav li { float:left; font-size:17px; line-height:1.2em; text-transform:uppercase; padding:0 30px; background:url(images/divider.gif) no-repeat left 7px; margin-left:-6px;}
 .site-nav li a { text-decoration:none; color:#949494;}
