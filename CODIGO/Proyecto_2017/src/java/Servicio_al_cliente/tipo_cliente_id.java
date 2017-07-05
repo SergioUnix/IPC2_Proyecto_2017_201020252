@@ -6,27 +6,25 @@
 package Servicio_al_cliente;
 
 import Operaciones.conexion;
-import Operaciones.login_operario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
-import java.util.ArrayList;
-import java.util.List;
 
 /**
  *
  * @author Ariel
  */
-public class empresas_cargar {
+public class tipo_cliente_id {
+    
 
     conexion conexion;
  String nombre;
          int cod_empresa;
     
-    public empresas_cargar(){
+    public tipo_cliente_id(){
     }
-     public empresas_cargar(int cod,String nombre){
+     public tipo_cliente_id(int cod,String nombre){
        
      this.nombre=nombre;
 this.cod_empresa=cod;
@@ -34,33 +32,32 @@ this.cod_empresa=cod;
     }
     
     
-    public List<String> cargar() throws SQLException{
-        List<String> Master=null;
-      List objeto_ini=null;
+    public int cargar(String nombre) throws SQLException{
+       
+    int Master=0;
       
       
     Connection dbConnection = null;
         PreparedStatement preparedStatement = null;
         
-    String selectSQL = "SELECT * FROM empresa";
+    String selectSQL = "SELECT * FROM tipo_cliente where nombre=?";
                     
         try {
                     
             dbConnection = new conexion().getDBConnection();
             preparedStatement = dbConnection.prepareStatement(selectSQL);
          
-           //preparedStatement.setString(1, cod_empresa);
-          // preparedStatement.setInt(2, nombre); 
+           preparedStatement.setString(1, nombre); 
          
             ResultSet rs;
             rs = preparedStatement.executeQuery();
-               Master=new ArrayList();
                
+              
             while (rs.next()) {
                  
                 
-               //Master.add(String.valueOf(rs.getInt(1)));
-                Master.add(rs.getString(2));
+               Master=rs.getInt(1);
+               /// Master.add(rs.getString(2));
                
                //Master.add(objeto_ini);
                 
@@ -91,9 +88,10 @@ this.cod_empresa=cod;
                 se.printStackTrace();
             }//end finally try
         }//end try
-        return null;
+        return Master;
 } 
 
+    
     
     
 }

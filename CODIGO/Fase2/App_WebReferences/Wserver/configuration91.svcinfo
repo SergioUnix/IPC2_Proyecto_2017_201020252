@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="6yd0yVyky33k/4VmZr/xgnUBGP4=">
+<SavedWcfConfigurationInformation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" Version="9.1" CheckSum="CWcdPgIvBV2xLLTlPWaGL/6JtsM=">
   <bindingConfigurations>
     <bindingConfiguration bindingType="basicHttpBinding" name="Ws_2017PortBinding">
       <properties>
@@ -112,7 +112,7 @@
     </bindingConfiguration>
   </bindingConfigurations>
   <endpoints>
-    <endpoint name="Ws_2017Port" contract="Wservicio.Ws_2017" bindingType="basicHttpBinding" address="http://localhost:8080/Proyecto_2017/Ws_2017" bindingConfiguration="Ws_2017PortBinding">
+    <endpoint name="Ws_2017Port" contract="Wserver.Ws_2017" bindingType="basicHttpBinding" address="http://localhost:8080/Proyecto_2017/Ws_2017" bindingConfiguration="Ws_2017PortBinding">
       <properties>
         <property path="/address" isComplexType="false" isExplicitlyDefined="true" clrType="System.Uri, System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>http://localhost:8080/Proyecto_2017/Ws_2017</serializedValue>
@@ -127,7 +127,7 @@
           <serializedValue>Ws_2017PortBinding</serializedValue>
         </property>
         <property path="/contract" isComplexType="false" isExplicitlyDefined="true" clrType="System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-          <serializedValue>Wservicio.Ws_2017</serializedValue>
+          <serializedValue>Wserver.Ws_2017</serializedValue>
         </property>
         <property path="/headers" isComplexType="true" isExplicitlyDefined="false" clrType="System.ServiceModel.Configuration.AddressHeaderCollectionElement, System.ServiceModel, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
           <serializedValue>System.ServiceModel.Configuration.AddressHeaderCollectionElement</serializedValue>

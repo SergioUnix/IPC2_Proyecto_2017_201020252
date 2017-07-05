@@ -10,9 +10,15 @@ import Operaciones.login_operario;
 import Operaciones.transaccion;
 import Servicio_al_cliente.cliente_agregar;
 import Servicio_al_cliente.cliente_agregar2;
+import Servicio_al_cliente.cliente_crear;
 import Servicio_al_cliente.cuenta_crear;
+import Servicio_al_cliente.cuenta_gestion_estado;
+import Servicio_al_cliente.empresa_buscar_id;
 import Servicio_al_cliente.empresas_cargar;
+import Servicio_al_cliente.estados_de_cuenta;
 import Servicio_al_cliente.prestamo_agregar;
+import Servicio_al_cliente.tipo_cliente_cargar;
+import Servicio_al_cliente.tipo_cliente_id;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.List;
@@ -23,16 +29,44 @@ import java.util.List;
  */
 public class Ariel_prueba {
      public static void main(String[] args) throws SQLException {
-         //Prueba empresas_cargar
          
-        empresas_cargar lis=new empresas_cargar();
-        List<String> des= lis.cargar();
+         //probar Update de estado cuenta
+        // cuenta_gestion_estado bus=new cuenta_gestion_estado();
+        // bus.crear(1, 201020, 18);
+         
+         
+         
+         //Probar una lista de listas 
+        // estados_de_cuenta result=new estados_de_cuenta();
+      // List<List> a = result.cargar();
+      // System.out.println(" resultados  ="+ a.get(3).get(3)+ a.get(0).size());
+       
+      // String matriz[][] = new String[a.size()][a.get(0).size()];
+       
+       // for(int i=0;i<a.size();i++){
+       // for(int j=0;j<a.get(0).size();j++){
+      //    matriz[i][j]=(String) a.get(i).get(j);
+          
         
-        for(int i =0;i<des.size();i++){
-        System.out.println("resultado  ="+des.get(i));
+      //  }}
+        
+        
+      // System.out.println("De la matriz   ="+ matriz[2][4]);
+       
          
-        }
+       //Buscar Id de un nombre de empresa
+         // tipo_cliente_id bus=new tipo_cliente_id();
+         //System.out.println("Id tipo es  ="+bus.cargar("Empresarial"));
          
+         
+//Prueba empresas_cargar         
+ //   tipo_cliente_cargar lis=new tipo_cliente_cargar();
+   //     List<String> des= lis.cargar();
+        
+   // for(int i=0;i<des.size();i++){
+    //    System.out.println("resultado  ="+des.get(i));
+    // }         
+       
          
        //Probar ArrayList login_cliente
         //  login_cliente opera=new login_cliente();
@@ -99,8 +133,8 @@ public class Ariel_prueba {
          
          
          //Crear Cuenta
-     //   cuenta_crear cuen=new cuenta_crear();
-       // cuen.crear(12500, "Monetaria", 1, 203040);
+       // cuenta_crear cuen=new cuenta_crear();
+       // cuen.crear(12500, "Monetaria", 1, 201020);
        //cuen.crear(5000, "Ahorro", 1, 406070);
       // cuen.crear(12500, "Ahorro a Plazo Fijo", 1, 306070);
       // cuen.crear(12500, "Ahorro a Plazo Fijo", 1, 106070);
@@ -130,9 +164,8 @@ public class Ariel_prueba {
  
  //Usuario Individual codigo individual es 1
   //cliente_agregar a=new cliente_agregar();
-// a.agregar(201020, "Sergio", "Ramirez", 8000, "Ser", "123", 1);
-  //a.agregar(102030, "Roberto", "Gym", 3000, "Rob", "1234", 1);
- // a.agregar(203040, "Vero", "Garcia", 2000,"Ver", "12345", 1);
+  //a.agregar(80, "Alberto", "dario", 4990, "Alb", 123, 1);
+  
   
 //Usuario Empresarial codigo empresarial es 2
   // cliente_agregar2 b= new cliente_agregar2();

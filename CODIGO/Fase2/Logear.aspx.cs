@@ -15,7 +15,8 @@ public partial class _Default : System.Web.UI.Page
 
     protected void Button1_Click(object sender, EventArgs e)
     {
-        Wservicio.Ws_2017Client Wserver = new Wservicio.Ws_2017Client();
+
+        Wserver.Ws_2017Client Wserver = new Wserver.Ws_2017Client();
         String usuario = TextBox1.Text;
         int contraseña = int.Parse(TextBox2.Text);
          String a = DropDownList1.Text;

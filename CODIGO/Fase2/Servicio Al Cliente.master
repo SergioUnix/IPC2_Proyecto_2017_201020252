@@ -25,8 +25,8 @@
   <!-- header -->
   <div id="header">
     <ul class="site-nav">
-      <li><a href="index.html">Inicio</a></li>
-      <li><a href="about-us.html">Agregar</a></li>
+      <li><a href="Logear.aspx">Inicio</a></li>
+      <li><a href="Servicio Al Cliente.aspx">Agregar</a></li>
       <li><a href="articles.html">Consultar</a></li>        
       <li><a href="index.html">Home</a></li>
       <li><a href="about-us.html">Gestiones</a></li>

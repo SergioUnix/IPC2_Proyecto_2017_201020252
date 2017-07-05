@@ -50,7 +50,11 @@
         <tr>
             <td>Empresa</td>
             <td>
-                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+              <asp:DropDownList ID="DropDownList2" runat="server">
+                                <asp:ListItem Selected="True" Value=""></asp:ListItem>
+                                         
+                              
+                          </asp:DropDownList>
             </td>
             <td>&nbsp;</td>
         </tr>
@@ -59,9 +63,7 @@
             <td>
                   <asp:DropDownList ID="DropDownList1" runat="server">
                                 <asp:ListItem Selected="True" Value=""></asp:ListItem>
-                               <asp:ListItem Value="Individual">Individual</asp:ListItem>
-                  <asp:ListItem Value="Empresarial">Empresarial</asp:ListItem>
-                 
+                                          
                               
                           </asp:DropDownList>
 
@@ -71,7 +73,7 @@
           <tr>
             <td style="height: 24px"></td>
             <td style="height: 24px">
-                <asp:Button ID="Button1" runat="server" Text="Agregar Usuario" />
+                <asp:Button ID="Button1" runat="server" Text="Agregar Usuario" OnClick="Button1_Click" />
 
             </td>
             <td style="height: 24px"></td>
@@ -79,8 +81,7 @@
 
     </table>
 
-      <asp:ListBox ID="ListBox1" runat="server"></asp:ListBox>
-    
+        <asp:label runat="server" text="" id="Labell"></asp:label>
   
     </form>
       

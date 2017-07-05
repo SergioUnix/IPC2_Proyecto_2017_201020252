@@ -14,17 +14,19 @@ import java.sql.SQLException;
  *
  * @author Ariel
  */
-public class cliente_agregar {
-    public cliente_agregar(){
+public class cliente_crear {
+    
+    
+    public cliente_crear(){
     }
     
-    public boolean agregar(int cui,String nombres,String apellidos ,int salario,String usuario,int contraseña,int cod_tipo_cliente) throws SQLException{
+    public boolean crear(int cui,String nombres,String apellidos ,int salario,String usuario,int contraseña,int cod_empresa,int cod_tipo_cliente) throws SQLException{
         
         Connection dbConnection = null;
         PreparedStatement preparedStatement = null;
 
         
-   String insertTableSQL = "Insert into cliente (cui,nombres,apellidos,salario,usuario,contraseña,cod_tipo_cliente)VALUES"+ "(?,?,?,?,?,?,?)";
+   String insertTableSQL = "Insert into cliente (cui,nombres,apellidos,salario,usuario,contraseña,cod_empresa,cod_tipo_cliente)VALUES"+ "(?,?,?,?,?,?,?,?)";
    
      
 
@@ -33,13 +35,15 @@ public class cliente_agregar {
             preparedStatement = dbConnection.prepareStatement(insertTableSQL);
           
             
-            preparedStatement.setInt(1, cui);
+           
+            preparedStatement.setInt(1,cui);
             preparedStatement.setString(2, nombres);
             preparedStatement.setString(3, apellidos);
-            preparedStatement.setInt(4, salario);
+            preparedStatement.setInt(4, salario);            
             preparedStatement.setString(5, usuario);
             preparedStatement.setInt(6, contraseña);
-            preparedStatement.setInt(7, cod_tipo_cliente);
+            preparedStatement.setInt(7, cod_empresa);
+            preparedStatement.setInt(8, cod_tipo_cliente);
             preparedStatement.executeUpdate();
             dbConnection.close();
 

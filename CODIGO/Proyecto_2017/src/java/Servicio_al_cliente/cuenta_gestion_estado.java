@@ -14,17 +14,20 @@ import java.sql.SQLException;
  *
  * @author Ariel
  */
-public class cliente_agregar {
-    public cliente_agregar(){
+public class cuenta_gestion_estado {
+    
+    
+    
+    public cuenta_gestion_estado(){
     }
     
-    public boolean agregar(int cui,String nombres,String apellidos ,int salario,String usuario,int contraseña,int cod_tipo_cliente) throws SQLException{
+    public boolean crear(int cod_estado_cuenta,int cui,int cod_cuenta) throws SQLException{
         
         Connection dbConnection = null;
         PreparedStatement preparedStatement = null;
 
         
-   String insertTableSQL = "Insert into cliente (cui,nombres,apellidos,salario,usuario,contraseña,cod_tipo_cliente)VALUES"+ "(?,?,?,?,?,?,?)";
+   String insertTableSQL = "Update cuenta set cod_estado_cuenta =? where cui=? and cod_cuenta =?";
    
      
 
@@ -33,13 +36,10 @@ public class cliente_agregar {
             preparedStatement = dbConnection.prepareStatement(insertTableSQL);
           
             
-            preparedStatement.setInt(1, cui);
-            preparedStatement.setString(2, nombres);
-            preparedStatement.setString(3, apellidos);
-            preparedStatement.setInt(4, salario);
-            preparedStatement.setString(5, usuario);
-            preparedStatement.setInt(6, contraseña);
-            preparedStatement.setInt(7, cod_tipo_cliente);
+           
+            preparedStatement.setInt(1, cod_estado_cuenta);
+            preparedStatement.setInt(2, cui);
+            preparedStatement.setInt(3, cod_cuenta);
             preparedStatement.executeUpdate();
             dbConnection.close();
 
@@ -62,6 +62,7 @@ public class cliente_agregar {
 
         }
 }
+    
     
     
     

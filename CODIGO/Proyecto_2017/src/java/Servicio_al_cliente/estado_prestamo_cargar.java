@@ -6,7 +6,6 @@
 package Servicio_al_cliente;
 
 import Operaciones.conexion;
-import Operaciones.login_operario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,15 +17,15 @@ import java.util.List;
  *
  * @author Ariel
  */
-public class empresas_cargar {
-
-    conexion conexion;
+public class estado_prestamo_cargar {
+    
+        conexion conexion;
  String nombre;
          int cod_empresa;
     
-    public empresas_cargar(){
+    public estado_prestamo_cargar(){
     }
-     public empresas_cargar(int cod,String nombre){
+     public estado_prestamo_cargar(int cod,String nombre){
        
      this.nombre=nombre;
 this.cod_empresa=cod;
@@ -42,7 +41,7 @@ this.cod_empresa=cod;
     Connection dbConnection = null;
         PreparedStatement preparedStatement = null;
         
-    String selectSQL = "SELECT * FROM empresa";
+    String selectSQL = "SELECT * FROM estado_prestamo";
                     
         try {
                     
@@ -94,6 +93,5 @@ this.cod_empresa=cod;
         return null;
 } 
 
-    
     
 }

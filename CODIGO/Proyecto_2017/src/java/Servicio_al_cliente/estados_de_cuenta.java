@@ -6,7 +6,6 @@
 package Servicio_al_cliente;
 
 import Operaciones.conexion;
-import Operaciones.login_operario;
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -18,15 +17,17 @@ import java.util.List;
  *
  * @author Ariel
  */
-public class empresas_cargar {
+public class estados_de_cuenta {
+    
+    
 
     conexion conexion;
  String nombre;
          int cod_empresa;
     
-    public empresas_cargar(){
+    public estados_de_cuenta(){
     }
-     public empresas_cargar(int cod,String nombre){
+     public estados_de_cuenta(int cod,String nombre){
        
      this.nombre=nombre;
 this.cod_empresa=cod;
@@ -34,22 +35,23 @@ this.cod_empresa=cod;
     }
     
     
-    public List<String> cargar() throws SQLException{
+    public List<String> cargar(int cui) throws SQLException{
         List<String> Master=null;
-      List objeto_ini=null;
+     // List objeto_ini=null;
       
       
     Connection dbConnection = null;
         PreparedStatement preparedStatement = null;
         
-    String selectSQL = "SELECT * FROM empresa";
+    String selectSQL = "select cliente.nombres , cuenta.cod_cuenta,cuenta.monto_disponible, cuenta.tipo,estado_cuenta.descripcion from cuenta inner join\n" +
+"cliente on cuenta.cui = cliente.cui inner join estado_cuenta on estado_cuenta.cod_estado_cuenta= cuenta.cod_estado_cuenta where cuenta.cui=?";
                     
         try {
                     
             dbConnection = new conexion().getDBConnection();
             preparedStatement = dbConnection.prepareStatement(selectSQL);
          
-           //preparedStatement.setString(1, cod_empresa);
+           preparedStatement.setInt(1, cui);
           // preparedStatement.setInt(2, nombre); 
          
             ResultSet rs;
@@ -57,12 +59,20 @@ this.cod_empresa=cod;
                Master=new ArrayList();
                
             while (rs.next()) {
-                 
+                Master.add("Nombres :");
+                Master.add(rs.getString(1));
+                Master.add("Código de Cuenta :");
+                Master.add(String.valueOf(rs.getInt(2)));
+                Master.add("Monto Disponible :");
+                Master.add(String.valueOf(rs.getInt(3)));
+                Master.add("Tipo de Cuenta :");
+                Master.add(rs.getString(4));
+                Master.add("Estado de cuenta :");
+                Master.add(rs.getString(5));
+                Master.add(" ");
+                Master.add(" ");
                 
-               //Master.add(String.valueOf(rs.getInt(1)));
-                Master.add(rs.getString(2));
-               
-               //Master.add(objeto_ini);
+              // Master.add(objeto_ini);
                 
             }
             rs.close();
@@ -94,6 +104,5 @@ this.cod_empresa=cod;
         return null;
 } 
 
-    
     
 }

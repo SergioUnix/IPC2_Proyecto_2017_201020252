@@ -1,0 +1,187 @@
+<?xml version="1.0" encoding="utf-8"?>
+<xs:schema xmlns:tns="http://Servicio/" targetNamespace="http://Servicio/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
+  <xs:element name="Hello_prueba" type="tns:Hello_prueba" />
+  <xs:element name="Hello_pruebaResponse" type="tns:Hello_pruebaResponse" />
+  <xs:element name="cliente_crear" type="tns:cliente_crear" />
+  <xs:element name="cliente_crearResponse" type="tns:cliente_crearResponse" />
+  <xs:element name="cliente_crear_individual" type="tns:cliente_crear_individual" />
+  <xs:element name="cliente_crear_individualResponse" type="tns:cliente_crear_individualResponse" />
+  <xs:element name="cuenta_crear" type="tns:cuenta_crear" />
+  <xs:element name="cuenta_crearResponse" type="tns:cuenta_crearResponse" />
+  <xs:element name="empresa_buscar_id" type="tns:empresa_buscar_id" />
+  <xs:element name="empresa_buscar_idResponse" type="tns:empresa_buscar_idResponse" />
+  <xs:element name="empresa_cargar" type="tns:empresa_cargar" />
+  <xs:element name="empresa_cargarResponse" type="tns:empresa_cargarResponse" />
+  <xs:element name="estado_cuenta_buscar_id" type="tns:estado_cuenta_buscar_id" />
+  <xs:element name="estado_cuenta_buscar_idResponse" type="tns:estado_cuenta_buscar_idResponse" />
+  <xs:element name="estado_cuenta_cargar" type="tns:estado_cuenta_cargar" />
+  <xs:element name="estado_cuenta_cargarResponse" type="tns:estado_cuenta_cargarResponse" />
+  <xs:element name="estados_de_cuenta" type="tns:estados_de_cuenta" />
+  <xs:element name="estados_de_cuentaResponse" type="tns:estados_de_cuentaResponse" />
+  <xs:element name="hello" type="tns:hello" />
+  <xs:element name="helloResponse" type="tns:helloResponse" />
+  <xs:element name="login_cliente" type="tns:login_cliente" />
+  <xs:element name="login_clienteResponse" type="tns:login_clienteResponse" />
+  <xs:element name="login_operario" type="tns:login_operario" />
+  <xs:element name="login_operarioResponse" type="tns:login_operarioResponse" />
+  <xs:element name="tipo_cliente_cargar" type="tns:tipo_cliente_cargar" />
+  <xs:element name="tipo_cliente_cargarResponse" type="tns:tipo_cliente_cargarResponse" />
+  <xs:element name="tipo_cliente_id" type="tns:tipo_cliente_id" />
+  <xs:element name="tipo_cliente_idResponse" type="tns:tipo_cliente_idResponse" />
+  <xs:complexType name="estado_cuenta_cargar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="estado_cuenta_cargarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_crear">
+    <xs:sequence>
+      <xs:element name="cui" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element name="salario" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cod_empresa" type="xs:int" />
+      <xs:element name="cod_tipo_cliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_crearResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipo_cliente_cargar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="tipo_cliente_cargarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Hello_prueba">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cod_rol" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="Hello_pruebaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado_cuenta_buscar_id">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="cadena" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado_cuenta_buscar_idResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login_operario">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cod_rol" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login_operarioResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empresa_buscar_id">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empresa_buscar_idResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_crear_individual">
+    <xs:sequence>
+      <xs:element name="cui" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element name="salario" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cod_tipo_cliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_crear_individualResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="hello">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="name" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="helloResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login_cliente">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cod_tipo_cliente" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="login_clienteResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="empresa_cargar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="empresa_cargarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipo_cliente_id">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="nombre" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tipo_cliente_idResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuenta_crear">
+    <xs:sequence>
+      <xs:element name="monto_disponible" type="xs:int" />
+      <xs:element minOccurs="0" name="tipo" type="xs:string" />
+      <xs:element name="cod_estado_cuenta" type="xs:int" />
+      <xs:element name="cui" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuenta_crearResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estados_de_cuenta">
+    <xs:sequence>
+      <xs:element name="cui" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estados_de_cuentaResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+</xs:schema>
