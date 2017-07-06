@@ -44,11 +44,13 @@ p { margin-bottom:14px; line-height:1.5em;}
 ul { list-style:none;}
 
 .site-nav { position:absolute; left:15px; 
-top:12px; 
+top:1px; 
 overflow:hidden;
-    height: 45px;
+    height: 73px;
 }
-.site-nav li { float:left; font-size:17px; line-height:1.2em; text-transform:uppercase; padding:0 30px; background:url(images/divider.gif) no-repeat left 7px; margin-left:-6px;}
+.site-nav li { float:left; font-size:17px; line-height:1.2em; text-transform:uppercase; padding:0 30px; background:url(images/divider.gif) no-repeat left 7px; margin-left:-6px;
+    width: 222px;
+}
 .site-nav li a { text-decoration:none; color:#949494;}
 .site-nav li a:hover,
 .site-nav li a.act  { 

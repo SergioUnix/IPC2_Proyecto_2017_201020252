@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="08112626-06c4-4813-8c7a-25ade58d3f31" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
+<ReferenceGroup xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" ID="ee628041-9b5a-4ca4-8e62-3fb5c65d8d28" xmlns="urn:schemas-microsoft-com:xml-wcfservicemap">
   <ClientOptions>
     <GenerateAsynchronousMethods>false</GenerateAsynchronousMethods>
     <GenerateTaskBasedAsynchronousMethod>true</GenerateTaskBasedAsynchronousMethod>
@@ -22,8 +22,8 @@
     <MetadataSource Address="http://localhost:8080/Proyecto_2017/Ws_2017?wsdl" Protocol="http" SourceId="1" />
   </MetadataSources>
   <Metadata>
-    <MetadataFile FileName="Ws_2017.xsd" MetadataType="Schema" ID="ff28c7bf-4e07-4dfa-9543-da6e56d57181" SourceId="1" SourceUrl="http://localhost:8080/Proyecto_2017/Ws_2017?xsd=1" />
-    <MetadataFile FileName="Ws_2017.wsdl" MetadataType="Wsdl" ID="50723a9c-e347-40ff-984e-81af2fbf4467" SourceId="1" SourceUrl="http://localhost:8080/Proyecto_2017/Ws_2017?wsdl" />
+    <MetadataFile FileName="Ws_2017.xsd" MetadataType="Schema" ID="5efb6caa-f925-4b46-8af9-f6d180cc49b2" SourceId="1" SourceUrl="http://localhost:8080/Proyecto_2017/Ws_2017?xsd=1" />
+    <MetadataFile FileName="Ws_2017.wsdl" MetadataType="Wsdl" ID="586932fc-2176-4d84-860d-00c7bdbaa8e1" SourceId="1" SourceUrl="http://localhost:8080/Proyecto_2017/Ws_2017?wsdl" />
   </Metadata>
   <Extensions>
     <ExtensionFile FileName="configuration91.svcinfo" Name="configuration91.svcinfo" />

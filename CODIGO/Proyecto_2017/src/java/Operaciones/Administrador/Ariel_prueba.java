@@ -164,7 +164,7 @@ public class Ariel_prueba {
  
  //Usuario Individual codigo individual es 1
   //cliente_agregar a=new cliente_agregar();
-  //a.agregar(80, "Alberto", "dario", 4990, "Alb", 123, 1);
+ // a.agregar(80, "Alberto", "dario", 4990, "Alb", 123, 1);
   
   
 //Usuario Empresarial codigo empresarial es 2

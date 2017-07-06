@@ -5,11 +5,23 @@
       <xsd:import schemaLocation="http://localhost:8080/Proyecto_2017/Ws_2017?xsd=1" namespace="http://Servicio/" />
     </xsd:schema>
   </types>
-  <message name="Hello_prueba">
-    <part name="parameters" element="tns:Hello_prueba" />
+  <message name="prestamo_agregar">
+    <part name="parameters" element="tns:prestamo_agregar" />
   </message>
-  <message name="Hello_pruebaResponse">
-    <part name="parameters" element="tns:Hello_pruebaResponse" />
+  <message name="prestamo_agregarResponse">
+    <part name="parameters" element="tns:prestamo_agregarResponse" />
+  </message>
+  <message name="empresa_cargar">
+    <part name="parameters" element="tns:empresa_cargar" />
+  </message>
+  <message name="empresa_cargarResponse">
+    <part name="parameters" element="tns:empresa_cargarResponse" />
+  </message>
+  <message name="login_cliente">
+    <part name="parameters" element="tns:login_cliente" />
+  </message>
+  <message name="login_clienteResponse">
+    <part name="parameters" element="tns:login_clienteResponse" />
   </message>
   <message name="login_operario">
     <part name="parameters" element="tns:login_operario" />
@@ -23,29 +35,11 @@
   <message name="helloResponse">
     <part name="parameters" element="tns:helloResponse" />
   </message>
-  <message name="login_cliente">
-    <part name="parameters" element="tns:login_cliente" />
+  <message name="Hello_prueba">
+    <part name="parameters" element="tns:Hello_prueba" />
   </message>
-  <message name="login_clienteResponse">
-    <part name="parameters" element="tns:login_clienteResponse" />
-  </message>
-  <message name="empresa_cargar">
-    <part name="parameters" element="tns:empresa_cargar" />
-  </message>
-  <message name="empresa_cargarResponse">
-    <part name="parameters" element="tns:empresa_cargarResponse" />
-  </message>
-  <message name="cliente_crear">
-    <part name="parameters" element="tns:cliente_crear" />
-  </message>
-  <message name="cliente_crearResponse">
-    <part name="parameters" element="tns:cliente_crearResponse" />
-  </message>
-  <message name="cuenta_crear">
-    <part name="parameters" element="tns:cuenta_crear" />
-  </message>
-  <message name="cuenta_crearResponse">
-    <part name="parameters" element="tns:cuenta_crearResponse" />
+  <message name="Hello_pruebaResponse">
+    <part name="parameters" element="tns:Hello_pruebaResponse" />
   </message>
   <message name="tipo_cliente_id">
     <part name="parameters" element="tns:tipo_cliente_id" />
@@ -53,23 +47,65 @@
   <message name="tipo_cliente_idResponse">
     <part name="parameters" element="tns:tipo_cliente_idResponse" />
   </message>
+  <message name="cuenta_crear">
+    <part name="parameters" element="tns:cuenta_crear" />
+  </message>
+  <message name="cuenta_crearResponse">
+    <part name="parameters" element="tns:cuenta_crearResponse" />
+  </message>
+  <message name="cliente_crear">
+    <part name="parameters" element="tns:cliente_crear" />
+  </message>
+  <message name="cliente_crearResponse">
+    <part name="parameters" element="tns:cliente_crearResponse" />
+  </message>
+  <message name="estado_prestamo_buscar_id">
+    <part name="parameters" element="tns:estado_prestamo_buscar_id" />
+  </message>
+  <message name="estado_prestamo_buscar_idResponse">
+    <part name="parameters" element="tns:estado_prestamo_buscar_idResponse" />
+  </message>
+  <message name="cuenta_gestion_estado">
+    <part name="parameters" element="tns:cuenta_gestion_estado" />
+  </message>
+  <message name="cuenta_gestion_estadoResponse">
+    <part name="parameters" element="tns:cuenta_gestion_estadoResponse" />
+  </message>
+  <message name="cliente_agregar_empresarial">
+    <part name="parameters" element="tns:cliente_agregar_empresarial" />
+  </message>
+  <message name="cliente_agregar_empresarialResponse">
+    <part name="parameters" element="tns:cliente_agregar_empresarialResponse" />
+  </message>
+  <message name="cliente_renovar_contraseña">
+    <part name="parameters" element="tns:cliente_renovar_contraseña" />
+  </message>
+  <message name="cliente_renovar_contraseñaResponse">
+    <part name="parameters" element="tns:cliente_renovar_contraseñaResponse" />
+  </message>
   <message name="tipo_cliente_cargar">
     <part name="parameters" element="tns:tipo_cliente_cargar" />
   </message>
   <message name="tipo_cliente_cargarResponse">
     <part name="parameters" element="tns:tipo_cliente_cargarResponse" />
   </message>
-  <message name="empresa_buscar_id">
-    <part name="parameters" element="tns:empresa_buscar_id" />
+  <message name="estado_prestamo_cargar">
+    <part name="parameters" element="tns:estado_prestamo_cargar" />
   </message>
-  <message name="empresa_buscar_idResponse">
-    <part name="parameters" element="tns:empresa_buscar_idResponse" />
+  <message name="estado_prestamo_cargarResponse">
+    <part name="parameters" element="tns:estado_prestamo_cargarResponse" />
   </message>
   <message name="cliente_crear_individual">
     <part name="parameters" element="tns:cliente_crear_individual" />
   </message>
   <message name="cliente_crear_individualResponse">
     <part name="parameters" element="tns:cliente_crear_individualResponse" />
+  </message>
+  <message name="empresa_buscar_id">
+    <part name="parameters" element="tns:empresa_buscar_id" />
+  </message>
+  <message name="empresa_buscar_idResponse">
+    <part name="parameters" element="tns:empresa_buscar_idResponse" />
   </message>
   <message name="estado_cuenta_cargar">
     <part name="parameters" element="tns:estado_cuenta_cargar" />
@@ -90,9 +126,17 @@
     <part name="parameters" element="tns:estados_de_cuentaResponse" />
   </message>
   <portType name="Ws_2017">
-    <operation name="Hello_prueba">
-      <input wsam:Action="http://Servicio/Ws_2017/Hello_pruebaRequest" message="tns:Hello_prueba" />
-      <output wsam:Action="http://Servicio/Ws_2017/Hello_pruebaResponse" message="tns:Hello_pruebaResponse" />
+    <operation name="prestamo_agregar">
+      <input wsam:Action="http://Servicio/Ws_2017/prestamo_agregarRequest" message="tns:prestamo_agregar" />
+      <output wsam:Action="http://Servicio/Ws_2017/prestamo_agregarResponse" message="tns:prestamo_agregarResponse" />
+    </operation>
+    <operation name="empresa_cargar">
+      <input wsam:Action="http://Servicio/Ws_2017/empresa_cargarRequest" message="tns:empresa_cargar" />
+      <output wsam:Action="http://Servicio/Ws_2017/empresa_cargarResponse" message="tns:empresa_cargarResponse" />
+    </operation>
+    <operation name="login_cliente">
+      <input wsam:Action="http://Servicio/Ws_2017/login_clienteRequest" message="tns:login_cliente" />
+      <output wsam:Action="http://Servicio/Ws_2017/login_clienteResponse" message="tns:login_clienteResponse" />
     </operation>
     <operation name="login_operario">
       <input wsam:Action="http://Servicio/Ws_2017/login_operarioRequest" message="tns:login_operario" />
@@ -102,37 +146,53 @@
       <input wsam:Action="http://Servicio/Ws_2017/helloRequest" message="tns:hello" />
       <output wsam:Action="http://Servicio/Ws_2017/helloResponse" message="tns:helloResponse" />
     </operation>
-    <operation name="login_cliente">
-      <input wsam:Action="http://Servicio/Ws_2017/login_clienteRequest" message="tns:login_cliente" />
-      <output wsam:Action="http://Servicio/Ws_2017/login_clienteResponse" message="tns:login_clienteResponse" />
-    </operation>
-    <operation name="empresa_cargar">
-      <input wsam:Action="http://Servicio/Ws_2017/empresa_cargarRequest" message="tns:empresa_cargar" />
-      <output wsam:Action="http://Servicio/Ws_2017/empresa_cargarResponse" message="tns:empresa_cargarResponse" />
-    </operation>
-    <operation name="cliente_crear">
-      <input wsam:Action="http://Servicio/Ws_2017/cliente_crearRequest" message="tns:cliente_crear" />
-      <output wsam:Action="http://Servicio/Ws_2017/cliente_crearResponse" message="tns:cliente_crearResponse" />
-    </operation>
-    <operation name="cuenta_crear">
-      <input wsam:Action="http://Servicio/Ws_2017/cuenta_crearRequest" message="tns:cuenta_crear" />
-      <output wsam:Action="http://Servicio/Ws_2017/cuenta_crearResponse" message="tns:cuenta_crearResponse" />
+    <operation name="Hello_prueba">
+      <input wsam:Action="http://Servicio/Ws_2017/Hello_pruebaRequest" message="tns:Hello_prueba" />
+      <output wsam:Action="http://Servicio/Ws_2017/Hello_pruebaResponse" message="tns:Hello_pruebaResponse" />
     </operation>
     <operation name="tipo_cliente_id">
       <input wsam:Action="http://Servicio/Ws_2017/tipo_cliente_idRequest" message="tns:tipo_cliente_id" />
       <output wsam:Action="http://Servicio/Ws_2017/tipo_cliente_idResponse" message="tns:tipo_cliente_idResponse" />
     </operation>
+    <operation name="cuenta_crear">
+      <input wsam:Action="http://Servicio/Ws_2017/cuenta_crearRequest" message="tns:cuenta_crear" />
+      <output wsam:Action="http://Servicio/Ws_2017/cuenta_crearResponse" message="tns:cuenta_crearResponse" />
+    </operation>
+    <operation name="cliente_crear">
+      <input wsam:Action="http://Servicio/Ws_2017/cliente_crearRequest" message="tns:cliente_crear" />
+      <output wsam:Action="http://Servicio/Ws_2017/cliente_crearResponse" message="tns:cliente_crearResponse" />
+    </operation>
+    <operation name="estado_prestamo_buscar_id">
+      <input wsam:Action="http://Servicio/Ws_2017/estado_prestamo_buscar_idRequest" message="tns:estado_prestamo_buscar_id" />
+      <output wsam:Action="http://Servicio/Ws_2017/estado_prestamo_buscar_idResponse" message="tns:estado_prestamo_buscar_idResponse" />
+    </operation>
+    <operation name="cuenta_gestion_estado">
+      <input wsam:Action="http://Servicio/Ws_2017/cuenta_gestion_estadoRequest" message="tns:cuenta_gestion_estado" />
+      <output wsam:Action="http://Servicio/Ws_2017/cuenta_gestion_estadoResponse" message="tns:cuenta_gestion_estadoResponse" />
+    </operation>
+    <operation name="cliente_agregar_empresarial">
+      <input wsam:Action="http://Servicio/Ws_2017/cliente_agregar_empresarialRequest" message="tns:cliente_agregar_empresarial" />
+      <output wsam:Action="http://Servicio/Ws_2017/cliente_agregar_empresarialResponse" message="tns:cliente_agregar_empresarialResponse" />
+    </operation>
+    <operation name="cliente_renovar_contraseña">
+      <input wsam:Action="http://Servicio/Ws_2017/cliente_renovar_contraseñaRequest" message="tns:cliente_renovar_contraseña" />
+      <output wsam:Action="http://Servicio/Ws_2017/cliente_renovar_contraseñaResponse" message="tns:cliente_renovar_contraseñaResponse" />
+    </operation>
     <operation name="tipo_cliente_cargar">
       <input wsam:Action="http://Servicio/Ws_2017/tipo_cliente_cargarRequest" message="tns:tipo_cliente_cargar" />
       <output wsam:Action="http://Servicio/Ws_2017/tipo_cliente_cargarResponse" message="tns:tipo_cliente_cargarResponse" />
     </operation>
-    <operation name="empresa_buscar_id">
-      <input wsam:Action="http://Servicio/Ws_2017/empresa_buscar_idRequest" message="tns:empresa_buscar_id" />
-      <output wsam:Action="http://Servicio/Ws_2017/empresa_buscar_idResponse" message="tns:empresa_buscar_idResponse" />
+    <operation name="estado_prestamo_cargar">
+      <input wsam:Action="http://Servicio/Ws_2017/estado_prestamo_cargarRequest" message="tns:estado_prestamo_cargar" />
+      <output wsam:Action="http://Servicio/Ws_2017/estado_prestamo_cargarResponse" message="tns:estado_prestamo_cargarResponse" />
     </operation>
     <operation name="cliente_crear_individual">
       <input wsam:Action="http://Servicio/Ws_2017/cliente_crear_individualRequest" message="tns:cliente_crear_individual" />
       <output wsam:Action="http://Servicio/Ws_2017/cliente_crear_individualResponse" message="tns:cliente_crear_individualResponse" />
+    </operation>
+    <operation name="empresa_buscar_id">
+      <input wsam:Action="http://Servicio/Ws_2017/empresa_buscar_idRequest" message="tns:empresa_buscar_id" />
+      <output wsam:Action="http://Servicio/Ws_2017/empresa_buscar_idResponse" message="tns:empresa_buscar_idResponse" />
     </operation>
     <operation name="estado_cuenta_cargar">
       <input wsam:Action="http://Servicio/Ws_2017/estado_cuenta_cargarRequest" message="tns:estado_cuenta_cargar" />
@@ -149,7 +209,25 @@
   </portType>
   <binding name="Ws_2017PortBinding" type="tns:Ws_2017">
     <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
-    <operation name="Hello_prueba">
+    <operation name="prestamo_agregar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="empresa_cargar">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="login_cliente">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -176,34 +254,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="login_cliente">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="empresa_cargar">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="cliente_crear">
-      <soap:operation soapAction="" />
-      <input>
-        <soap:body use="literal" />
-      </input>
-      <output>
-        <soap:body use="literal" />
-      </output>
-    </operation>
-    <operation name="cuenta_crear">
+    <operation name="Hello_prueba">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -221,6 +272,60 @@
         <soap:body use="literal" />
       </output>
     </operation>
+    <operation name="cuenta_crear">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cliente_crear">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="estado_prestamo_buscar_id">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cuenta_gestion_estado">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cliente_agregar_empresarial">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="cliente_renovar_contraseña">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
     <operation name="tipo_cliente_cargar">
       <soap:operation soapAction="" />
       <input>
@@ -230,7 +335,7 @@
         <soap:body use="literal" />
       </output>
     </operation>
-    <operation name="empresa_buscar_id">
+    <operation name="estado_prestamo_cargar">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />
@@ -240,6 +345,15 @@
       </output>
     </operation>
     <operation name="cliente_crear_individual">
+      <soap:operation soapAction="" />
+      <input>
+        <soap:body use="literal" />
+      </input>
+      <output>
+        <soap:body use="literal" />
+      </output>
+    </operation>
+    <operation name="empresa_buscar_id">
       <soap:operation soapAction="" />
       <input>
         <soap:body use="literal" />

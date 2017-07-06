@@ -8,6 +8,7 @@ package Servicio;
 import Operaciones.login_cliente;
 import Operaciones.login_operario;
 import Servicio_al_cliente.cliente_agregar;
+import Servicio_al_cliente.cliente_agregar_empresarial;
 import Servicio_al_cliente.cliente_crear;
 import Servicio_al_cliente.cliente_renovar_contraseña;
 import Servicio_al_cliente.cuenta_crear;
@@ -392,6 +393,23 @@ tipo_cliente_cargar lis=new tipo_cliente_cargar();
         }
         
         
+        
+        return z;
+    }
+
+    /**
+     * Web service operation
+     */
+    @WebMethod(operationName = "cliente_agregar_empresarial")
+    public boolean cliente_agregar_empresarial(@WebParam(name = "cui") int cui, @WebParam(name = "nombres") String nombres, @WebParam(name = "apellidos") String apellidos, @WebParam(name = "salario") int salario, @WebParam(name = "usuario") String usuario, @WebParam(name = "contrase\u00f1a") int contraseña, @WebParam(name = "cod_empresa") int cod_empresa, @WebParam(name = "cod_tipo_cliente") int cod_tipo_cliente, @WebParam(name = "encargado1") String encargado1, @WebParam(name = "encargado2") String encargado2, @WebParam(name = "encargado3") String encargado3) {
+  cliente_agregar_empresarial bus= new cliente_agregar_empresarial();
+  boolean z=false;
+  
+        try {
+            z= bus.agregar(cui, nombres, apellidos, salario, usuario, contraseña, cod_empresa, cod_tipo_cliente, encargado1, encargado2, encargado3);
+        } catch (SQLException ex) {
+            Logger.getLogger(Ws_2017.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
         return z;
     }

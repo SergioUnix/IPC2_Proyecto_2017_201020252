@@ -26,12 +26,13 @@
   <div id="header">
     <ul class="site-nav">
       <li><a href="Logear.aspx">Inicio</a></li>
-      <li><a href="Servicio Al Cliente.aspx">Agregar</a></li>
-      <li><a href="articles.html">Consultar</a></li>        
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about-us.html">Gestiones</a></li>
-      <li><a href="articles.html">Articles</a></li>
-      <li><a href="contact-us.html" class="act">Contact</a></li>
+      <li><a href="Servicio Al Cliente.aspx">Registrar Usuario</a></li>
+      <li><a href="Servicio Al Cliente 1.aspx">Crear Cuentas</a></li>        
+      <li><a href="Servicio Al Cliente 2.aspx">Apertura Prestamo</a></li>
+      <li><a href="Servicio Al Cliente 3.aspx">Estados de cuentas</a></li>
+      <li><a href="Servicio Al Cliente 4.aspx">Gestion Cuentas</a></li>
+      <li><a href="Servicio Al Cliente 5.aspx">Renovar Contraseña</a></li>
+    
     </ul>
     <div class="logo"><a href="#"><img src="images/logo.gif" alt="" /></a></div>
   </div>

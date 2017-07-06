@@ -2,12 +2,18 @@
 <xs:schema xmlns:tns="http://Servicio/" targetNamespace="http://Servicio/" version="1.0" xmlns:xs="http://www.w3.org/2001/XMLSchema">
   <xs:element name="Hello_prueba" type="tns:Hello_prueba" />
   <xs:element name="Hello_pruebaResponse" type="tns:Hello_pruebaResponse" />
+  <xs:element name="cliente_agregar_empresarial" type="tns:cliente_agregar_empresarial" />
+  <xs:element name="cliente_agregar_empresarialResponse" type="tns:cliente_agregar_empresarialResponse" />
   <xs:element name="cliente_crear" type="tns:cliente_crear" />
   <xs:element name="cliente_crearResponse" type="tns:cliente_crearResponse" />
   <xs:element name="cliente_crear_individual" type="tns:cliente_crear_individual" />
   <xs:element name="cliente_crear_individualResponse" type="tns:cliente_crear_individualResponse" />
+  <xs:element name="cliente_renovar_contraseña" type="tns:cliente_renovar_contraseña" />
+  <xs:element name="cliente_renovar_contraseñaResponse" type="tns:cliente_renovar_contraseñaResponse" />
   <xs:element name="cuenta_crear" type="tns:cuenta_crear" />
   <xs:element name="cuenta_crearResponse" type="tns:cuenta_crearResponse" />
+  <xs:element name="cuenta_gestion_estado" type="tns:cuenta_gestion_estado" />
+  <xs:element name="cuenta_gestion_estadoResponse" type="tns:cuenta_gestion_estadoResponse" />
   <xs:element name="empresa_buscar_id" type="tns:empresa_buscar_id" />
   <xs:element name="empresa_buscar_idResponse" type="tns:empresa_buscar_idResponse" />
   <xs:element name="empresa_cargar" type="tns:empresa_cargar" />
@@ -16,6 +22,10 @@
   <xs:element name="estado_cuenta_buscar_idResponse" type="tns:estado_cuenta_buscar_idResponse" />
   <xs:element name="estado_cuenta_cargar" type="tns:estado_cuenta_cargar" />
   <xs:element name="estado_cuenta_cargarResponse" type="tns:estado_cuenta_cargarResponse" />
+  <xs:element name="estado_prestamo_buscar_id" type="tns:estado_prestamo_buscar_id" />
+  <xs:element name="estado_prestamo_buscar_idResponse" type="tns:estado_prestamo_buscar_idResponse" />
+  <xs:element name="estado_prestamo_cargar" type="tns:estado_prestamo_cargar" />
+  <xs:element name="estado_prestamo_cargarResponse" type="tns:estado_prestamo_cargarResponse" />
   <xs:element name="estados_de_cuenta" type="tns:estados_de_cuenta" />
   <xs:element name="estados_de_cuentaResponse" type="tns:estados_de_cuentaResponse" />
   <xs:element name="hello" type="tns:hello" />
@@ -24,6 +34,8 @@
   <xs:element name="login_clienteResponse" type="tns:login_clienteResponse" />
   <xs:element name="login_operario" type="tns:login_operario" />
   <xs:element name="login_operarioResponse" type="tns:login_operarioResponse" />
+  <xs:element name="prestamo_agregar" type="tns:prestamo_agregar" />
+  <xs:element name="prestamo_agregarResponse" type="tns:prestamo_agregarResponse" />
   <xs:element name="tipo_cliente_cargar" type="tns:tipo_cliente_cargar" />
   <xs:element name="tipo_cliente_cargarResponse" type="tns:tipo_cliente_cargarResponse" />
   <xs:element name="tipo_cliente_id" type="tns:tipo_cliente_id" />
@@ -53,12 +65,33 @@
       <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
+  <xs:complexType name="cliente_renovar_contraseña">
+    <xs:sequence>
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cui" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_renovar_contraseñaResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
   <xs:complexType name="tipo_cliente_cargar">
     <xs:sequence />
   </xs:complexType>
   <xs:complexType name="tipo_cliente_cargarResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado_prestamo_buscar_id">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="estado" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado_prestamo_buscar_idResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:int" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="Hello_prueba">
@@ -71,6 +104,34 @@
   <xs:complexType name="Hello_pruebaResponse">
     <xs:sequence>
       <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:anyType" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_agregar_empresarial">
+    <xs:sequence>
+      <xs:element name="cui" type="xs:int" />
+      <xs:element minOccurs="0" name="nombres" type="xs:string" />
+      <xs:element minOccurs="0" name="apellidos" type="xs:string" />
+      <xs:element name="salario" type="xs:int" />
+      <xs:element minOccurs="0" name="usuario" type="xs:string" />
+      <xs:element name="contraseña" type="xs:int" />
+      <xs:element name="cod_empresa" type="xs:int" />
+      <xs:element name="cod_tipo_cliente" type="xs:int" />
+      <xs:element minOccurs="0" name="encargado1" type="xs:string" />
+      <xs:element minOccurs="0" name="encargado2" type="xs:string" />
+      <xs:element minOccurs="0" name="encargado3" type="xs:string" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cliente_agregar_empresarialResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="estado_prestamo_cargar">
+    <xs:sequence />
+  </xs:complexType>
+  <xs:complexType name="estado_prestamo_cargarResponse">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="return" type="xs:string" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="estado_cuenta_buscar_id">
@@ -103,6 +164,32 @@
   <xs:complexType name="empresa_buscar_idResponse">
     <xs:sequence>
       <xs:element name="return" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prestamo_agregar">
+    <xs:sequence>
+      <xs:element minOccurs="0" name="modo_pago" type="xs:string" />
+      <xs:element name="monto_solicitado" type="xs:int" />
+      <xs:element name="abono_cancelado" type="xs:int" />
+      <xs:element name="cui" type="xs:int" />
+      <xs:element name="cod_estado_prestamo" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="prestamo_agregarResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuenta_gestion_estado">
+    <xs:sequence>
+      <xs:element name="cod_estado_cuenta" type="xs:int" />
+      <xs:element name="cui" type="xs:int" />
+      <xs:element name="cod_cuenta" type="xs:int" />
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="cuenta_gestion_estadoResponse">
+    <xs:sequence>
+      <xs:element name="return" type="xs:boolean" />
     </xs:sequence>
   </xs:complexType>
   <xs:complexType name="cliente_crear_individual">

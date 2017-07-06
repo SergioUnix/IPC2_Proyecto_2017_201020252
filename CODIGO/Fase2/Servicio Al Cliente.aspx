@@ -43,40 +43,59 @@
         <tr>
             <td>Contraseña</td>
             <td>
-                <asp:TextBox ID="TextBox6" runat="server"></asp:TextBox>
+                <asp:TextBox ID="TextBox6" runat="server" Enabled="false"></asp:TextBox>
             </td>
             <td>&nbsp;</td>
         </tr>
-        <tr>
-            <td>Empresa</td>
-            <td>
-              <asp:DropDownList ID="DropDownList2" runat="server">
-                                <asp:ListItem Selected="True" Value=""></asp:ListItem>
-                                         
-                              
-                          </asp:DropDownList>
-            </td>
-            <td>&nbsp;</td>
-        </tr>
-        <tr>
+          <tr>
             <td>Tipo Cliente</td>
             <td>
                   <asp:DropDownList ID="DropDownList1" runat="server">
                                 <asp:ListItem Selected="True" Value=""></asp:ListItem>
+                               <asp:ListItem Value="Individual">Individual</asp:ListItem>
+                  <asp:ListItem Value="Empresarial">Empresarial</asp:ListItem>
                                           
                               
                           </asp:DropDownList>
 
             </td>
+        <tr>
+            <td>Empresa</td>
+            <td>
+              <asp:DropDownList ID="DropDownList2" runat="server">
+                               
+                                         
+                              
+                          </asp:DropDownList>
+            </td>
+            
+            <tr>
+            <td>Encargado 1</td>
+            <td>
+                <asp:TextBox ID="TextBox7" runat="server"></asp:TextBox>
+            </td>
             <td>&nbsp;</td>
         </tr>
+            <tr>
+            <td>Encargado 2</td>
+            <td>
+                <asp:TextBox ID="TextBox8" runat="server"></asp:TextBox>
+            </td>
+            <td>&nbsp;</td>
+        </tr>
+            <tr>
+            <td>Encargado 3</td>
+            <td>
+                <asp:TextBox ID="TextBox9" runat="server"></asp:TextBox>
+            </td>
+           
           <tr>
             <td style="height: 24px"></td>
             <td style="height: 24px">
                 <asp:Button ID="Button1" runat="server" Text="Agregar Usuario" OnClick="Button1_Click" />
 
             </td>
-            <td style="height: 24px"></td>
+           
         </tr>
 
     </table>
